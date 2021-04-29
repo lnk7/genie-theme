@@ -1,0 +1,13 @@
+<div>
+
+    <h2>Delivery Companies:</h2>
+
+
+    {% for deliveryCompany in deliveryCompanies %}
+    <li>
+        {{ deliveryCompany.company.post_title }}  ( {{ deliveryCompany.orders }} orders)
+    </li>
+
+    {% endfor %}
+
+</div>

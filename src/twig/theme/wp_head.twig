@@ -1,0 +1,124 @@
+{#  facebook #}
+<meta name="facebook-domain-verification" content="gynv9307wjj6xfcdo321wf4emdcoue" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ googleAnalyticsID }}"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', '{{ googleAnalyticsID }}');
+</script>
+
+
+{% if useFacebookPixel %}
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '279581226725180');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=279581226725180&ev=PageView&noscript=1"
+        /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+{% endif %}
+
+{% if exponeaTracking %}
+    <script>
+        !function (e, n, t, i, o, r) {
+            var a = 4e3, c = "xnpe_async_hide";
+
+            function s(e) {
+                return e.reduce((function (e, n) {
+                    return e[n] = function () {
+                        e._.push([n.toString(), arguments])
+                    }, e
+                }), {_: []})
+            }
+
+            function m(e, n, t) {
+                var i = t.createElement(n);
+                i.src = e;
+                var o = t.getElementsByTagName(n)[0];
+                return o.parentNode.insertBefore(i, o), i
+            }
+
+            r.target = r.target || "https://api.exponea.com", r.file_path = r.file_path || r.target + "/js/exponea.min.js", e[t] = s(["anonymize", "initialize", "identify", "update", "track", "trackLink", "trackEnhancedEcommerce", "getHtml", "showHtml", "showBanner", "showWebLayer", "ping", "getAbTest", "loadDependency", "getRecommendation", "reloadWebLayers"]), e[t].notifications = s(["isAvailable", "isSubscribed", "subscribe", "unsubscribe"]), e[t].snippetVersion = "v2.1.0", function (e, n, t) {
+                e[n]["_" + t] = {}, e[n]["_" + t].nowFn = e[t] && e[t].now ? e[t].now.bind(e[t]) : Date.now, e[n]["_" + t].snippetStartTime = e[n]["_" + t].nowFn()
+            }(e, t, "performance"), function (e, n, t, i, o, r) {
+                e[o] = {sdk: e[i], sdkObjectName: i, skipExperiments: !!t.new_experiments, sign: t.token + "/" + (r.exec(n.cookie) || ["", "new"])[1], path: t.target}
+            }(e, n, r, t, o, RegExp("__exponea_etc__" + "=([\w-]+)")), function (e, n, t) {
+                m(e.file_path, n, t)
+            }(r, i, n), function (e, n, t, i, o, r, s) {
+                if (e.new_experiments) {
+                    !0 === e.new_experiments && (e.new_experiments = {});
+                    var p = e.new_experiments.hide_class || c, u = e.new_experiments.timeout || a, _ = encodeURIComponent(r.location.href.split("#")[0]),
+                        l = e.target + "/webxp/" + n + "/" + r[t].sign + "/modifications.min.js?http-referer=" + _ + "&timeout=" + u + "ms";
+                    "sync" === e.new_experiments.mode && r.localStorage.getItem("__exponea__sync_modifications__") ? function (e, n, t, i, o) {
+                        t[o][n] = "<" + n + ' src="' + e + '"></' + n + ">", i.writeln(t[o][n]), i.writeln("<" + n + ">!" + o + ".init && document.writeln(" + o + "." + n + '.replace("/' + n + '/", "/' + n + '-async/").replace("><", " async><"))</' + n + ">")
+                    }(l, n, r, s, t) : function (e, n, t, i, o, r, a, c) {
+                        r.documentElement.classList.add(e);
+                        var s = m(t, i, r);
+
+                        function p() {
+                            o[c].init || m(t.replace("/" + i + "/", "/" + i + "-async/"), i, r)
+                        }
+
+                        function u() {
+                            r.documentElement.classList.remove(e)
+                        }
+
+                        s.onload = p, s.onerror = p, o.setTimeout(u, n), o[a]._revealPage = u
+                    }(p, u, l, n, r, s, o, t)
+                }
+            }(r, i, o, 0, t, e, n), function (e, n, t) {
+                e[n].start = function (i) {
+                    i && Object.keys(i).forEach((function (e) {
+                        return t[e] = i[e]
+                    })), e[n].initialize(t)
+                }
+            }(e, t, r)
+        }(window, document, "exponea", "script", "webxpClient", {
+            target: "https://api.exponea.com",
+            token: "def7915a-17e5-11e9-900e-0a580a204109",
+            track: {
+                visits: true,
+            },
+        });
+        exponea.start();
+    </script>
+{% endif %}
+
+<script>
+    /**
+     * This is used later
+     * @type {string}
+     */
+    const trackingEndpoint = '{{ trackingEndpoint }}';
+    const exponeaTracking = '{{ exponeaTracking ? 'true' : 'false' }}';
+</script>

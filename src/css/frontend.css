@@ -1,0 +1,200 @@
+@import 'preflight';
+
+#cahFrontend {
+    padding: 2rem 0;
+}
+
+
+.vt-fade-enter-active,
+.vt-fade-leave-active {
+    transition: opacity .5s;
+}
+
+.vt-fade-enter,
+.vt-fade-leave-to {
+    opacity: 0;
+}
+
+
+li.gold a {
+    color: #D1C299 !important;
+}
+
+li.product {
+    border: 1px solid transparent;
+}
+
+li.product h2 {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+}
+
+
+li.product_cat-dining,
+li.product_cat-gifting {
+    border: 1px solid #D1C299 !important;
+}
+
+
+.image-container {
+    position: relative;
+}
+
+.ProductItem__LabelList {
+    position: absolute;
+    left: 10px;
+    top: 6px;
+    text-align: left;
+    width: 60%;
+}
+
+
+.ProductItem__statusmarker.red{
+    position: absolute;
+    left: 10px;
+    bottom: 6px;
+    text-align: left;
+    width: 60%;
+}
+
+.ProductItem__statusmarker.red .ProductItem__Label{
+    color: #ff0000;
+}
+
+.ProductItem__LabelList_Right {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    width: 40%;
+}
+
+.ProductItem__Label {
+    background-color: #fff;
+    color: #475b75;
+    display: block;
+    font-size: 12px;
+    font-family: "copperplate", Sans-serif;
+    border: 1px solid white;
+    font-style: normal;
+    margin: 4px 0;
+    padding: 2px 6px;
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+}
+
+.product-action-row  .buynow{
+    float:right
+}
+
+.product-action-row .pricearea{
+    float:left;
+}
+
+.pricearea .price{
+    font-size:18px;
+    margin-top:3px;
+}
+
+.woocommerce ul.products li.product .product-action-row .buynow a.button{
+    margin:0;
+    margin-top:0;
+    font-size:18px;
+    padding:10px 15px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+html body .elementor-6541 .elementor-element.elementor-element-af443f9.elementor-wc-products ul.products li.product h2.woocommerce-loop-product__title, .woocommerce ul.products li.product .woocommerce-loop-product__title{
+    margin-bottom:30px;
+}
+
+.product-action-row .pricearea{
+    display:inline-block;
+    width:50%;
+}
+
+.product-action-row .buynow, .product-action-row .pricearea{
+    margin-top:0;
+}
+
+.product-action-row{
+    position: absolute;
+    bottom: 0;
+    width:100%;
+}
+
+
+li.product .price{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+div.buy-now{
+    background-color:#d1c299;
+    color:white;
+    padding:0 20px;
+    border:0;
+}
+
+div.buynow button{
+    padding: 5px 15px;
+}
+
+
+.woocommerce ul.products li.product .pricearea .price{
+    position: relative;
+    width: 100%;
+    margin-top:5px;
+    margin-bottom:0;
+}
+
+.elementor-wc-products ul.products li.product{
+    background-color:whitesmoke;
+    border: 1px solid #d1c299;
+}
+
+
+.ProductItem__Label_Gluten_Free {
+    background-color: #E5C298;
+    float: right;
+    margin-left: 4px;
+    color: #fff;
+    border: 1px solid white;
+    min-width: 35px;
+    text-align: center;
+}
+
+.ProductItem__Label_Vegetarian {
+    background-color: #C0CC9E;
+    float: right;
+    color: #fff;
+    margin-left: 4px;
+    border: 1px solid white;
+    min-width: 35px;
+    text-align: center;
+}
+.ProductItem__Label_Vegan {
+    background-color: #C0CC9E;
+    float: right;
+    color: #fff;
+    margin-left: 4px;
+    border: 1px solid white;
+    min-width: 35px;
+    text-align: center;
+}
+
+
+.ProductItem__Label_Freezing {
+    background-color: #86D7EF;
+    float: right;
+    color: #fff;
+    margin-left: 4px;
+    border: 1px solid white;
+    min-width: 35px;
+    text-align: center;
+}
+
