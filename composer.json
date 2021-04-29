@@ -1,6 +1,7 @@
 {
   "name": "lnk7/genie-theme",
-  "description": "Sample theme using the Genie framework",
+  "description": "A sample theme using the GeniePress Framework",
+  "license": "GPL-2.0-or-later",
   "minimum-stability": "stable",
   "require": {
     "lnk7/genie": "^1.4"

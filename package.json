@@ -1,9 +1,9 @@
 {
   "name": "genie-theme",
   "version": "1.0.0",
-  "description": "Genie Theme using the Genie Framework",
+  "description": "A sample theme using the GeniePress Framework",
   "author": "Sunil Jaiswal",
-  "license": "MIT",
+  "license": "GPL-2.0-or-later",
   "main": "main.js",
   "scripts": {
     "dev": "webpack --mode development --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
