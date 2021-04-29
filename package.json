@@ -1,24 +1,19 @@
 {
-  "name": "coteathomefrontend",
+  "name": "genie-theme",
   "version": "1.0.0",
-  "description": "Cote At home Vue Components",
-  "author": "Sunil Kumar",
+  "description": "Genie Theme using the Genie Framework",
+  "author": "Sunil Jaiswal",
   "license": "MIT",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "prod": "npm run prodfront && npm run prodback",
-    "prodback": "cross-env UI_MODE=backend npm run production",
-    "prodfront": "cross-env UI_MODE=frontend npm run production",
-    "watchback": "cross-env.cmd UI_MODE=backend npm run development -- --watch",
-    "watchfront": "cross-env UI_MODE=frontend npm run development -- --watch",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    "dev": "webpack --mode development --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "webpack --mode production --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "webpack --mode development --progress --hide-modules  --watch --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.3.0",
     "autoprefixer": "^9.8.6",
     "axios": "^0.20.0",
-    "credit-card-type": "^9.0.1",
     "cross-env": "^7.0.2",
     "gsap": "^3.5.1",
     "laravel-mix": "^5.0.5",
@@ -30,12 +25,8 @@
     "postcss-nested": "^4.2.3",
     "sass": "^1.27.0",
     "sass-loader": "^10.0.3",
-    "store": "^2.0.12",
     "tailwindcss": "^1.8.10",
     "vue": "^2.6.12",
-    "vue-template-compiler": "^2.6.12",
-    "vue-toasted": "^1.1.28",
-    "vuejs-datepicker": "^1.6.2",
-    "vuex": "^3.5.1"
+    "vue-template-compiler": "^2.6.12"
   }
 }
