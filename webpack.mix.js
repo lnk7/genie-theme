@@ -1,13 +1,12 @@
 const mix = require(`laravel-mix`)
 const polyfil = require(`laravel-mix-polyfill`)
 
-
-// Stops mix-manifest.json from beiung created
+// Stops mix-manifest.json from being created
 Mix.manifest.refresh = _ => void 0
 
 mix
-.js(`src/ui/js/theme.js`, `theme.js`)
-.postCss(`src/ui/css/theme.css`, `theme.css`, [
+.js(`src/js/theme.js`, `dist/theme.js`)
+.postCss(`src/css/theme.css`, `dist/theme.css`, [
   require(`postcss-import`),
   require(`tailwindcss`)(`tailwind.config.js`),
   require(`postcss-nested`),
